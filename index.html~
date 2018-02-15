@@ -1,278 +1,340 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- <p id="notice"><%= notice %></p>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="referrer" content="origin">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<h1>Listing Posts</h1>
 
-    <title>Creative - Start Bootstrap Theme</title>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.content %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<br>
 
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+<%= link_to 'New Post', new_post_path %> -->
 
-    <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">
 
-  </head>
 
-  <body id="page-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<!-- 여기부터 시작 -->
+<html>
+	<head>
+		<title>Story by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
 
-    <header class="masthead text-center text-white d-flex">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h1 class="text-uppercase">
-              <strong>코니변태 패턴 기반 의류 추천 시스템 옷장의 품격3</strong>
-            </h1>
-            <hr>
-          </div>
-          <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
-          </div>
-        </div>
-      </div>
-    </header>
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
 
-    <section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">We've got what you need!</h2>
-            <hr class="light my-4">
-            <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
-          </div>
-        </div>
-      </div>
-    </section>
+				<!-- One -->
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Story</h1>
+							<p class="major">Top Tier Smart Factory Engineer for The Forth Industry Revolution</p>
+							<ul class="actions vertical">
+								<li><a href="https://github.com/KyungGon-Lee" class="button big wide smooth-scroll-middle">GitHub</a></li>
+							</ul>
+						</div>
+							<img src="images/banner1.jpg">
+					</section>
 
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">At Your Service</h2>
-            <hr class="my-4">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Sturdy Templates</h3>
-              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Ready to Ship</h3>
-              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Up to Date</h3>
-              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Made with Love</h3>
-              <p class="text-muted mb-0">You have to make your websites with love these days!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+				<!-- Two -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>Mechanical Engineering</h2>
+							<p>기계 공학</p>
+							<ul class="actions vertical">
+								<li><a href="https://ko.wikipedia.org/wiki/%EA%B8%B0%EA%B3%84%EA%B3%B5%ED%95%99" class="button">START</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/spotlight1.jpg">
+						</div>
+					</section>
 
-    <section class="p-0" id="portfolio">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters popup-gallery">
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+				<!-- Three -->
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Electronic Engineering</h2>
+							<p>전자 공학</p>
+							<ul class="actions vertical">
+								<li><a href="https://ko.wikipedia.org/wiki/%EC%A0%84%EC%9E%90%EA%B3%B5%ED%95%99" class="button">START</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/spotlight2.jpg">
+						</div>
+					</section>
 
-    <section class="bg-dark text-white">
-      <div class="container text-center">
-        <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-        <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
-      </div>
-    </section>
+				<!-- Four -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Computer Science</h2>
+							<p>컴퓨터 공학</p>
+							<ul class="actions vertical">
+								<li><a href="https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%B5%ED%95%99" class="button">START</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/spotlight3.jpg">
+						</div>
+					</section>
 
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Let's Get In Touch!</h2>
-            <hr class="my-4">
-            <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 ml-auto text-center">
-            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>123-456-6789</p>
-          </div>
-          <div class="col-lg-4 mr-auto text-center">
-            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
-            <p>
-              <a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a>
-            </p>
-          </div>
-        </div>
-      </div>
-        <h2>HELLO!<h2>
-          <form method="POST" action="http://formspree.io/dlrudrhs3000@naver.com">
-            <input type="email" name="email" placeholder="Your email"><br>
-            <textarea name="message" placeholder="Your message"></textarea>
-            <button type="submit">Send</button>
-          </form>
-    </section>
+				<!-- Five -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>보유 기술</h2>
+						</div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+						<!-- Gallery -->
+							<div class="gallery style2 medium lightbox onscroll-fade-in">
+								<!-- <article>
+									<a href="images/gallery/fulls/01.jpg" class="image">
+										<img src="images/gallery/thumbs/01.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>돈까스</h3>
+										<p>까스맨은 돈까스에서 태어난 돈까스인간입니다.</p>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article> -->
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+								<article>
+									<a href="images/gallery/fulls/02.gif" class="image" height="300px">
+										<img src="images/gallery/thumbs/02.gif" alt="" height="300px" />
+									</a>
+									<div class="caption">
+										<h3>PLC</h3>
+										<h4>Programmable Logic Controller</h4>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
+								<article>
+									<a href="images/gallery/fulls/03.gif" class="image" height="300px">
+										<img src="images/gallery/thumbs/03.gif" alt="" / height="300px">
+									</a>
+									<div class="caption">
+										<h3>Ruby</h3>
+										<h4>Web 개발에 특화된 언어</h4>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
 
-  </body>
+								<article>
+									<a href="images/gallery/fulls/01.gif" class="image" height="300px">
+										<img src="images/gallery/thumbs/01.gif" alt=""  height="300px"/>
+									</a>
+									<div class="caption">
+										<h3>Labview</h3>
+										<h4>National Instrument's Programming Language</h4>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
 
+								<article>
+									<a href="images/gallery/fulls/07.gif" class="image">
+										<img src="images/gallery/thumbs/07.gif" alt="" height="300px"/>
+									</a>
+									<div class="caption">
+										<h3>CAD</h3>
+										<h4>Computer Aided Design</h4>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+
+								<article>
+									<a href="images/gallery/fulls/08.gif" class="image">
+										<img src="images/gallery/thumbs/08.gif" alt="" height="300px"/>
+									</a>
+									<div class="caption">
+										<h3>Solid Works</h3>
+										<h4>3D Design Tool</h4>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+
+								<article>
+									<a href="images/gallery/fulls/05.jpg" class="image">
+										<img src="images/gallery/thumbs/05.jpg" alt=""  height="300px"/>
+									</a>
+									<div class="caption">
+										<h3>SAP Modules</h3>
+										<h4>SAP MM, PP, SD, ME, MII, MES</h4>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+
+								<article>
+									<a href="images/gallery/fulls/06.jpg" class="image">
+										<img src="images/gallery/thumbs/06.jpg" alt=""  height="300px"/>
+									</a>
+									<div class="caption">
+										<h3>SAP ABAP</h3>
+										<h4>SAP Programming Language</h4>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+
+
+								<article>
+									<a href="images/gallery/fulls/09.gif" class="image">
+										<img src="images/gallery/thumbs/09.gif" alt="" height="300px" />
+									</a>
+									<div class="caption">
+										<h3>VR Contents Develop</h3>
+										<h4>Using Unity(C#)</h4>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+
+							</div>
+					</section>
+
+				<!-- Six -->
+					<!-- <section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>아아아아아</h2>
+							<p>와아아아아아아앙아앙</p>
+							<div class="items style1 medium onscroll-fade-in">
+								<section>
+									<span class="icon style2 major fa-diamond"></span>
+									<h3>보석</h3>
+									<p>나만 보석없어 ㅠㅠ</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-save"></span>
+									<h3>파일</h3>
+									<p>파이리~</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-bar-chart"></span>
+									<h3>차트</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-wifi"></span>
+									<h3>와이파이</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-cog"></span>
+									<h3>톱니바큉</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-paper-plane"></span>
+									<h3>종이 비행기</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-desktop"></span>
+									<h3>모니터</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-refresh"></span>
+									<h3>순환</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-hashtag"></span>
+									<h3>샾</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-bolt"></span>
+									<h3>전기 찌지직</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-envelope"></span>
+									<h3>메일 보내깅</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-leaf"></span>
+									<h3>나뭇잎</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+								</section>
+							</div>
+						</div>
+					</section> -->
+
+				<!-- Seven -->
+					<section class="wrapper style1 align-center">
+						<div class="inner medium">
+							<h2>Contect me</h2>
+							<form action="https://formspree.io/dlrudrhs3000@naver.com"method="POST">
+
+								<div class="field">
+									<label for="email">이메일 주소</label>
+									<input type="email" name="이메일" id="email">
+								</div>
+								<div class="field">
+									<label for="message">메세지</label>
+									<textarea name="message" name="메세지" id="message" rows="6"></textarea>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" name="submit" id="submit" value="전송" /></li>
+								</ul>
+							</form>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
+
+							<p>&copy; Untitled. Design: <a href="https://github.com/KyungGon-Lee">깃허브 주소</a>.</p>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
